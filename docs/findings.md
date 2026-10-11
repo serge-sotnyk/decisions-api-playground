@@ -107,22 +107,22 @@ from one client and one short session, not server-only inference times or genera
 latency guarantees. Full distributions and results for the other blocks remain
 available in the generated report and individual request records.
 
-The whole run cost **$0.025779678**, including warmups, calculated from reported input
-tokens and the frozen tariffs: Jev $0.042 per million and Decisions $0.10 per million;
+The whole run cost **\$0.025779678**, including warmups, calculated from reported input
+tokens and the frozen tariffs: Jev \$0.042 per million and Decisions \$0.10 per million;
 output was free. This is a usage-based calculation, not an invoice reconciliation.
 Tariff sources and verification date are preserved in the manifest.
 
-Jev accounted for $0.005718678 over 162 requests; Decisions accounted for $0.020061
+Jev accounted for \$0.005718678 over 162 requests; Decisions accounted for \$0.020061
 over 326 requests. Those totals cover different workloads because Decisions also
 handled the two image modes, so they should not be compared as equal-task costs.
 
 For the original text requests, Decisions cost about 2.56 times as much in English
 and 1.55 times as much in Ukrainian. Token counts matter as well as the published
 per-token rate: across the three Ukrainian traps, Decisions text averaged
-$0.020567 per 1,000 requests versus Jev's $0.022442. For that row, 1,000 requests
+\$0.020567 per 1,000 requests versus Jev's \$0.022442. For that row, 1,000 requests
 means the same equal mixture of the three examples.
 
-The warmup-based forecast was $0.07313104 for the measured portion. It intentionally
+The warmup-based forecast was \$0.07313104 for the measured portion. It intentionally
 used the longer nine-question requests as a proxy; the actual matrix contains many
 shorter requests. Use the completed run's usage for reporting actual cost.
 

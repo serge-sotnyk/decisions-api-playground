@@ -6,7 +6,7 @@ Planned measurements: 480; not executed: 0.
 Measured requests: 480; warmups: 8.
 Dataset hash: `1db58f724d1aa799899f6433598cc9f7f376675ff9fd54ec61fc6b8dee602351`.
 Pricing checked: 2026-10-09. Standard direct API input pricing; no regional premium or long-context multiplier. Output is free. Recheck sources before each live run.
-Known subtotal for the entire run, including warmup: $0.02577968; requests with unknown cost: 0.
+Known subtotal for the entire run, including warmup: \$0.02577968; requests with unknown cost: 0.
 
 ## Correctness and stability
 

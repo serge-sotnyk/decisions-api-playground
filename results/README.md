@@ -1,7 +1,7 @@
 # Results
 
 The **2026-10-09** live experiment is complete: 480 measured requests plus 8 warmups,
-all successful, with no refusals and no missing usage. The usage-based cost was **$0.025779678**.
+all successful, with no refusals and no missing usage. The usage-based cost was **\$0.025779678**.
 
 - [Findings and interpretation](../docs/findings.md)
 - [Full report](published/20261009-main/report.md)

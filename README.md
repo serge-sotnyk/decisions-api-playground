@@ -5,7 +5,7 @@ A continuation of the [earlier Jev experiment](https://www.linkedin.com/pulse/je
 
 **Status:** the 2026-10-09 live run is complete: 480 measured requests and 8 warmups, with no API errors or refusals.
 Read the [findings](docs/findings.md) and the [full report](results/published/20261009-main/report.md).
-Usage-based cost at the recorded tariffs was **$0.025779678**, including warmups.
+Usage-based cost at the recorded tariffs was **\$0.025779678**, including warmups.
 The responses in `tests/fixtures` are synthetic contract fixtures, not model performance measurements.
 
 ## Experiment matrix
@@ -43,7 +43,7 @@ uv run --locked decisions-playground run --dry-run
 Before a paid run, compare the [Jev tariff](https://docs.typesafe.ai/models) and
 [Decisions tariff](https://developers.openai.com/api/docs/guides/decisions) with `data/pricing.json`.
 The file records the verification date, model, source, and USD per million input tokens.
-The recorded base rates are $0.042 and $0.10 respectively; output is free.
+The recorded base rates are \$0.042 and \$0.10 respectively; output is free.
 For regional premiums, provide the applicable rate in a separate file using `--pricing`.
 
 Optionally run only the eight initial checks and inspect the rough full-run cost forecast:

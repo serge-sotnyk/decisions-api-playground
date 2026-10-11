@@ -324,7 +324,7 @@ def generate_report(run_dir: Path, output: Path | None = None) -> Path:
         f"Measured requests: {summary['measurement_requests']}; warmups: {summary['warmup_requests']}.",
         f"Dataset hash: `{manifest['dataset']['fingerprint']}`.",
         f"Pricing checked: {manifest['pricing']['checked_on']}. {manifest['pricing']['scope']}",
-        f"Known subtotal for the entire run, including warmup: ${summary['known_total_cost_usd']:.8f}; requests with unknown cost: {summary['unknown_cost_requests']}.",
+        rf"Known subtotal for the entire run, including warmup: \${summary['known_total_cost_usd']:.8f}; requests with unknown cost: {summary['unknown_cost_requests']}.",
         "",
         "## Correctness and stability",
         "",
