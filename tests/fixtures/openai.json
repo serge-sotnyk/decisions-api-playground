@@ -1,0 +1,8 @@
+{
+  "model": "gpt-6-luna",
+  "answers": [
+    {"name": "q2", "type": "choice", "choice": "a", "confidence": 0.99, "probabilities": [{"value": "a", "probability": 1.0}, {"value": "b", "probability": 0.0}, {"value": "c", "probability": 0.0}, {"value": "d", "probability": 0.0}]},
+    {"name": "q1", "type": "choice", "choice": "c", "confidence": 0.7, "probabilities": [{"value": "a", "probability": 0.1}, {"value": "b", "probability": 0.0}, {"value": "c", "probability": 0.9}, {"value": "d", "probability": 0.0}]}
+  ],
+  "usage": {"input_tokens": 1000, "output_tokens": 0, "total_tokens": 1000}
+}

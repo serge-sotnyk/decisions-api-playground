@@ -1,0 +1,39 @@
+[project]
+name = "decisions-api-playground"
+version = "0.1.0"
+description = "A small reproducible Jev / OpenAI Decisions experiment in Ukrainian and English"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "httpx>=0.28.1,<1",
+    "python-dotenv>=1.1,<2",
+    "pillow>=12,<13",
+    "matplotlib>=3.10,<4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.14", "ty>=0.0.1"]
+
+[project.scripts]
+decisions-playground = "decisions_playground.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/decisions_playground"]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ty.environment]
+python-version = "3.14"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

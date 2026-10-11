@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-10-09",
+  "currency": "USD",
+  "scope": "Standard direct API input pricing; no regional premium or long-context multiplier. Output is free. Recheck sources before each live run.",
+  "providers": {
+    "jev": {
+      "model": "jev-1.13.0",
+      "input_per_million": 0.042,
+      "source": "https://docs.typesafe.ai/models"
+    },
+    "openai": {
+      "model": "gpt-6-luna",
+      "input_per_million": 0.10,
+      "source": "https://developers.openai.com/api/docs/guides/decisions"
+    }
+  }
+}

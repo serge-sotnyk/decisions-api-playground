@@ -1,0 +1,2213 @@
+{
+  "status": "complete",
+  "execution": "live",
+  "planned_measurements": 480,
+  "measurement_requests": 480,
+  "warmup_requests": 8,
+  "known_total_cost_usd": 0.025779678,
+  "unknown_cost_requests": 0,
+  "groups": [
+    {
+      "block": "original",
+      "language": "en",
+      "mode": "jev-text",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 80,
+      "answered": 90,
+      "accuracy_answered": 0.8888888888888888,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 275.15214549999996,
+      "min_ms": 251.367917,
+      "max_ms": 991.248041,
+      "mean_input_tokens": 1471,
+      "known_cost_usd": 0.00061782,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.061782,
+      "returned_models": [
+        "jev-1.13.0"
+      ]
+    },
+    {
+      "block": "original",
+      "language": "en",
+      "mode": "openai-png",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 90,
+      "answered": 90,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 304.941604,
+      "min_ms": 161.563167,
+      "max_ms": 802.057042,
+      "mean_input_tokens": 2027,
+      "known_cost_usd": 0.002027,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.2027,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "original",
+      "language": "en",
+      "mode": "openai-png-small",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 80,
+      "answered": 90,
+      "accuracy_answered": 0.8888888888888888,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 271.09858299999996,
+      "min_ms": 158.422667,
+      "max_ms": 379.367375,
+      "mean_input_tokens": 1571,
+      "known_cost_usd": 0.001571,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.1571,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "original",
+      "language": "en",
+      "mode": "openai-text",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 90,
+      "answered": 90,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 235.62660449999998,
+      "min_ms": 135.299875,
+      "max_ms": 306.022042,
+      "mean_input_tokens": 1580,
+      "known_cost_usd": 0.0015799999999999998,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.158,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "original",
+      "language": "uk",
+      "mode": "jev-text",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 80,
+      "answered": 90,
+      "accuracy_answered": 0.8888888888888888,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 269.11110399999995,
+      "min_ms": 245.030458,
+      "max_ms": 421.961583,
+      "mean_input_tokens": 2918,
+      "known_cost_usd": 0.00122556,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.12255600000000001,
+      "returned_models": [
+        "jev-1.13.0"
+      ]
+    },
+    {
+      "block": "original",
+      "language": "uk",
+      "mode": "openai-png",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 80,
+      "answered": 90,
+      "accuracy_answered": 0.8888888888888888,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 273.09818700000005,
+      "min_ms": 162.207708,
+      "max_ms": 524.114333,
+      "mean_input_tokens": 2232,
+      "known_cost_usd": 0.002232,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.2232,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "original",
+      "language": "uk",
+      "mode": "openai-png-small",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 80,
+      "answered": 90,
+      "accuracy_answered": 0.8888888888888888,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 250.87295799999998,
+      "min_ms": 155.328792,
+      "max_ms": 472.304125,
+      "mean_input_tokens": 1814,
+      "known_cost_usd": 0.0018139999999999999,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.18139999999999998,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "original",
+      "language": "uk",
+      "mode": "openai-text",
+      "requests": 10,
+      "question_attempts": 90,
+      "unique_questions": 9,
+      "correct": 80,
+      "answered": 90,
+      "accuracy_answered": 0.8888888888888888,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 10,
+      "median_ms": 249.30991649999999,
+      "min_ms": 139.474667,
+      "max_ms": 348.332458,
+      "mean_input_tokens": 1896,
+      "known_cost_usd": 0.0018960000000000001,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.1896,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "en",
+      "mode": "jev-text",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 30,
+      "answered": 30,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 264.6013545,
+      "min_ms": 241.113417,
+      "max_ms": 370.033208,
+      "mean_input_tokens": 396.3333333333333,
+      "known_cost_usd": 0.00049938,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.016646,
+      "returned_models": [
+        "jev-1.13.0"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "en",
+      "mode": "openai-png",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 30,
+      "answered": 30,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 223.286604,
+      "min_ms": 128.929042,
+      "max_ms": 286.1575,
+      "mean_input_tokens": 396.6666666666667,
+      "known_cost_usd": 0.0011899999999999999,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.03966666666666666,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "en",
+      "mode": "openai-png-small",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 30,
+      "answered": 30,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 211.4840625,
+      "min_ms": 120.437666,
+      "max_ms": 623.412333,
+      "mean_input_tokens": 213,
+      "known_cost_usd": 0.000639,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.0213,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "en",
+      "mode": "openai-text",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 30,
+      "answered": 30,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 206.68041649999998,
+      "min_ms": 110.215208,
+      "max_ms": 246.846833,
+      "mean_input_tokens": 177.66666666666666,
+      "known_cost_usd": 0.000533,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.017766666666666667,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "uk",
+      "mode": "jev-text",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 30,
+      "answered": 30,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 268.20793749999996,
+      "min_ms": 238.331833,
+      "max_ms": 394.053583,
+      "mean_input_tokens": 534.3333333333334,
+      "known_cost_usd": 0.00067326,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.022442,
+      "returned_models": [
+        "jev-1.13.0"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "uk",
+      "mode": "openai-png",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 30,
+      "answered": 30,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 236.5473125,
+      "min_ms": 129.20425,
+      "max_ms": 552.26575,
+      "mean_input_tokens": 412.6666666666667,
+      "known_cost_usd": 0.001238,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.04126666666666667,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "uk",
+      "mode": "openai-png-small",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 20,
+      "answered": 30,
+      "accuracy_answered": 0.6666666666666666,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 214.1244585,
+      "min_ms": 114.7305,
+      "max_ms": 714.916417,
+      "mean_input_tokens": 229,
+      "known_cost_usd": 0.000687,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.0229,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "traps",
+      "language": "uk",
+      "mode": "openai-text",
+      "requests": 30,
+      "question_attempts": 30,
+      "unique_questions": 3,
+      "correct": 30,
+      "answered": 30,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 30,
+      "median_ms": 201.0496465,
+      "min_ms": 106.283459,
+      "max_ms": 239.087958,
+      "mean_input_tokens": 205.66666666666666,
+      "known_cost_usd": 0.000617,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.020566666666666667,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "wording",
+      "language": "en",
+      "mode": "jev-text",
+      "requests": 40,
+      "question_attempts": 40,
+      "unique_questions": 4,
+      "correct": 30,
+      "answered": 40,
+      "accuracy_answered": 0.75,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 40,
+      "median_ms": 271.073708,
+      "min_ms": 241.64075,
+      "max_ms": 429.598667,
+      "mean_input_tokens": 547.75,
+      "known_cost_usd": 0.00092022,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.0230055,
+      "returned_models": [
+        "jev-1.13.0"
+      ]
+    },
+    {
+      "block": "wording",
+      "language": "en",
+      "mode": "openai-text",
+      "requests": 40,
+      "question_attempts": 40,
+      "unique_questions": 4,
+      "correct": 40,
+      "answered": 40,
+      "accuracy_answered": 1.0,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 40,
+      "median_ms": 202.0620835,
+      "min_ms": 107.149958,
+      "max_ms": 276.6025,
+      "mean_input_tokens": 321.75,
+      "known_cost_usd": 0.001287,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.032174999999999995,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "block": "wording",
+      "language": "uk",
+      "mode": "jev-text",
+      "requests": 40,
+      "question_attempts": 40,
+      "unique_questions": 4,
+      "correct": 30,
+      "answered": 40,
+      "accuracy_answered": 0.75,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 40,
+      "median_ms": 268.401916,
+      "min_ms": 235.905709,
+      "max_ms": 399.428791,
+      "mean_input_tokens": 951.25,
+      "known_cost_usd": 0.0015981,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.0399525,
+      "returned_models": [
+        "jev-1.13.0"
+      ]
+    },
+    {
+      "block": "wording",
+      "language": "uk",
+      "mode": "openai-text",
+      "requests": 40,
+      "question_attempts": 40,
+      "unique_questions": 4,
+      "correct": 30,
+      "answered": 40,
+      "accuracy_answered": 0.75,
+      "refusals": 0,
+      "request_errors": 0,
+      "question_errors": 0,
+      "unstable_questions": 0,
+      "latency_samples": 40,
+      "median_ms": 207.279104,
+      "min_ms": 102.980708,
+      "max_ms": 321.460416,
+      "mean_input_tokens": 409.5,
+      "known_cost_usd": 0.0016380000000000001,
+      "unknown_cost_requests": 0,
+      "usd_per_1000_requests": 0.04095,
+      "returned_models": [
+        "gpt-6-luna"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q1",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 0,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q2",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q3",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q4",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q5",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q6",
+      "expected": "a",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "a": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q7",
+      "expected": "c",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "c": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q8",
+      "expected": "b",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "b": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "question_id": "q9",
+      "expected": "d",
+      "attempts": 10,
+      "correct": 10,
+      "choices": {
+        "d": 10
+      },
+      "refusals": 0,
+      "errors": 0,
+      "distinct_choices": 1,
+      "answer_changed": false
+    }
+  ]
+}

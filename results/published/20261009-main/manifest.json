@@ -1,0 +1,3624 @@
+{
+  "schema_version": 1,
+  "execution": "live",
+  "created_at": "2026-10-09T12:18:05.464435+00:00",
+  "status": "complete",
+  "seed": 20261009,
+  "timeout_seconds": 30,
+  "models": {
+    "jev": "jev-1.13.0",
+    "openai": "gpt-6-luna"
+  },
+  "pricing": {
+    "checked_on": "2026-10-09",
+    "currency": "USD",
+    "scope": "Standard direct API input pricing; no regional premium or long-context multiplier. Output is free. Recheck sources before each live run.",
+    "providers": {
+      "jev": {
+        "model": "jev-1.13.0",
+        "input_per_million": 0.042,
+        "source": "https://docs.typesafe.ai/models"
+      },
+      "openai": {
+        "model": "gpt-6-luna",
+        "input_per_million": 0.1,
+        "source": "https://developers.openai.com/api/docs/guides/decisions"
+      }
+    }
+  },
+  "dataset": {
+    "examples": [
+      {
+        "id": "original-uk",
+        "block": "original",
+        "language": "uk",
+        "text": "Марко ледь не запізнився на внутрішню нараду, а Олена прийшла на двадцять хвилин пізніше домовленого. «Олено, та ти просто взірець пунктуальності!» — сказав він, глянувши на годинник. «Учора так і не дійшли руки прочитати лист зі зміною часу», — пояснила вона. Олену попросив переробити висновки Марко: його непокоїли не цифри у звіті, а надто сміливі узагальнення. «Не переписуй увесь звіт: зміни лише останній абзац», — уточнив він. Не всі зауваження Марка Олена вважала слушними, проте сперечатися не стала. Зустріч із клієнтом вирішили відкласти до п'ятниці, а не скасувати. «Навряд чи клієнт зрадіє», — зауважила Олена. Його відповіді вони ще не отримали.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Хто, згідно з текстом, запізнився на внутрішню нараду?",
+            "choices": {
+              "a": "І Марко, і Олена.",
+              "b": "Марко запізнився, а Олена — ні.",
+              "c": "Олена запізнилася, а Марко — ні.",
+              "d": "Ні Марко, ні Олена."
+            }
+          },
+          {
+            "id": "q2",
+            "instructions": "Що Марко найімовірніше хотів висловити словами «та ти просто взірець пунктуальності»?",
+            "choices": {
+              "a": "Іронічно дорікнути Олені за запізнення.",
+              "b": "Щиро похвалити Олену за своєчасний прихід.",
+              "c": "Подякувати Олені за нагадування про час наради.",
+              "d": "Поставити Олену за приклад іншим учасникам наради."
+            }
+          },
+          {
+            "id": "q3",
+            "instructions": "Яке пояснення найточніше передає зміст слів Олени «не дійшли руки прочитати лист»?",
+            "choices": {
+              "a": "Вона прочитала лист, але не погодилася зі зміною часу.",
+              "b": "Вона не змогла відкрити лист через технічну несправність.",
+              "c": "Вона не отримала листа зі зміною часу.",
+              "d": "Вона так і не взялася за читання листа."
+            }
+          },
+          {
+            "id": "q4",
+            "instructions": "Хто кого попросив переробити висновки?",
+            "choices": {
+              "a": "Олена попросила Марка.",
+              "b": "Марко попросив Олену.",
+              "c": "Клієнт попросив Марка.",
+              "d": "Олена попросила клієнта."
+            }
+          },
+          {
+            "id": "q5",
+            "instructions": "Що саме непокоїло Марка у звіті?",
+            "choices": {
+              "a": "Помилки в наведених числових даних.",
+              "b": "Занадто далекосяжні висновки.",
+              "c": "Недостатня кількість числових даних.",
+              "d": "Надмірно обережні й нерішучі висновки."
+            }
+          },
+          {
+            "id": "q6",
+            "instructions": "Яка дія відповідатиме уточненню Марка щодо редагування звіту?",
+            "choices": {
+              "a": "Відредагувати тільки фінальний абзац, залишивши решту тексту без змін.",
+              "b": "Переписати весь звіт, почавши з останнього абзацу.",
+              "c": "Виправити лише цифри, не змінюючи висновків.",
+              "d": "Залишити весь звіт без змін."
+            }
+          },
+          {
+            "id": "q7",
+            "instructions": "Що точно випливає з речення «Не всі зауваження Марка Олена вважала слушними»?",
+            "choices": {
+              "a": "Усі зауваження вона вважала слушними.",
+              "b": "Жодного зауваження вона не вважала слушним.",
+              "c": "Принаймні одне зауваження вона не вважала слушним.",
+              "d": "Вона ще не мала думки про жодне зауваження."
+            }
+          },
+          {
+            "id": "q8",
+            "instructions": "Що вирішили зробити із зустріччю з клієнтом?",
+            "choices": {
+              "a": "Повністю відмовитися від проведення зустрічі.",
+              "b": "Перенести зустріч на п'ятницю.",
+              "c": "Призначити додаткову зустріч у п'ятницю, не змінюючи первісної.",
+              "d": "Провести зустріч раніше за початково запланований час."
+            }
+          },
+          {
+            "id": "q9",
+            "instructions": "Який висновок про реакцію клієнта обґрунтований текстом?",
+            "choices": {
+              "a": "Клієнт уже висловив невдоволення перенесенням.",
+              "b": "Клієнт неодмінно буде незадоволений перенесенням.",
+              "c": "Клієнт уже погодився на перенесення.",
+              "d": "Відповідь клієнта ще невідома; Олена сумнівається, що він зрадіє."
+            }
+          }
+        ]
+      },
+      {
+        "id": "almost-uk",
+        "block": "wording",
+        "language": "uk",
+        "text": "Марко ледь не запізнився на внутрішню нараду, а Олена прийшла на двадцять хвилин пізніше домовленого. «Олено, та ти просто взірець пунктуальності!» — сказав він, глянувши на годинник. «Учора так і не дійшли руки прочитати лист зі зміною часу», — пояснила вона. Олену попросив переробити висновки Марко: його непокоїли не цифри у звіті, а надто сміливі узагальнення. «Не переписуй увесь звіт: зміни лише останній абзац», — уточнив він. Не всі зауваження Марка Олена вважала слушними, проте сперечатися не стала. Зустріч із клієнтом вирішили відкласти до п'ятниці, а не скасувати. «Навряд чи клієнт зрадіє», — зауважила Олена. Його відповіді вони ще не отримали.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Хто, згідно з текстом, запізнився на внутрішню нараду?",
+            "choices": {
+              "a": "І Марко, і Олена.",
+              "b": "Марко запізнився, а Олена — ні.",
+              "c": "Олена запізнилася, а Марко — ні.",
+              "d": "Ні Марко, ні Олена."
+            }
+          }
+        ]
+      },
+      {
+        "id": "actually-uk",
+        "block": "wording",
+        "language": "uk",
+        "text": "Марко таки запізнився на внутрішню нараду, а Олена прийшла на двадцять хвилин пізніше домовленого. «Олено, та ти просто взірець пунктуальності!» — сказав він, глянувши на годинник. «Учора так і не дійшли руки прочитати лист зі зміною часу», — пояснила вона. Олену попросив переробити висновки Марко: його непокоїли не цифри у звіті, а надто сміливі узагальнення. «Не переписуй увесь звіт: зміни лише останній абзац», — уточнив він. Не всі зауваження Марка Олена вважала слушними, проте сперечатися не стала. Зустріч із клієнтом вирішили відкласти до п'ятниці, а не скасувати. «Навряд чи клієнт зрадіє», — зауважила Олена. Його відповіді вони ще не отримали.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Хто, згідно з текстом, запізнився на внутрішню нараду?",
+            "choices": {
+              "a": "І Марко, і Олена.",
+              "b": "Марко запізнився, а Олена — ні.",
+              "c": "Олена запізнилася, а Марко — ні.",
+              "d": "Ні Марко, ні Олена."
+            }
+          }
+        ]
+      },
+      {
+        "id": "barely-uk",
+        "block": "wording",
+        "language": "uk",
+        "text": "Марко ледве встиг на внутрішню нараду вчасно, а Олена прийшла на двадцять хвилин пізніше домовленого. «Олено, та ти просто взірець пунктуальності!» — сказав він, глянувши на годинник. «Учора так і не дійшли руки прочитати лист зі зміною часу», — пояснила вона. Олену попросив переробити висновки Марко: його непокоїли не цифри у звіті, а надто сміливі узагальнення. «Не переписуй увесь звіт: зміни лише останній абзац», — уточнив він. Не всі зауваження Марка Олена вважала слушними, проте сперечатися не стала. Зустріч із клієнтом вирішили відкласти до п'ятниці, а не скасувати. «Навряд чи клієнт зрадіє», — зауважила Олена. Його відповіді вони ще не отримали.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Хто, згідно з текстом, запізнився на внутрішню нараду?",
+            "choices": {
+              "a": "І Марко, і Олена.",
+              "b": "Марко запізнився, а Олена — ні.",
+              "c": "Олена запізнилася, а Марко — ні.",
+              "d": "Ні Марко, ні Олена."
+            }
+          }
+        ]
+      },
+      {
+        "id": "little-uk",
+        "block": "wording",
+        "language": "uk",
+        "text": "Марко трохи запізнився на внутрішню нараду, а Олена прийшла на двадцять хвилин пізніше домовленого. «Олено, та ти просто взірець пунктуальності!» — сказав він, глянувши на годинник. «Учора так і не дійшли руки прочитати лист зі зміною часу», — пояснила вона. Олену попросив переробити висновки Марко: його непокоїли не цифри у звіті, а надто сміливі узагальнення. «Не переписуй увесь звіт: зміни лише останній абзац», — уточнив він. Не всі зауваження Марка Олена вважала слушними, проте сперечатися не стала. Зустріч із клієнтом вирішили відкласти до п'ятниці, а не скасувати. «Навряд чи клієнт зрадіє», — зауважила Олена. Його відповіді вони ще не отримали.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Хто, згідно з текстом, запізнився на внутрішню нараду?",
+            "choices": {
+              "a": "І Марко, і Олена.",
+              "b": "Марко запізнився, а Олена — ні.",
+              "c": "Олена запізнилася, а Марко — ні.",
+              "d": "Ні Марко, ні Олена."
+            }
+          }
+        ]
+      },
+      {
+        "id": "original-en",
+        "block": "original",
+        "language": "en",
+        "text": "Marko was almost late for the internal meeting, while Olena arrived twenty minutes after the agreed time. “Olena, you're the very model of punctuality!” he said, glancing at his watch. “I didn't get around to reading the email about the time change yesterday,” she explained. Olena was asked by Marko to revise the conclusions: it wasn't the figures in the report that concerned him, but the overly bold generalizations. “Don't rewrite the whole report: change only the last paragraph,” he clarified. Olena did not consider all of Marko's comments valid, but she did not argue. They decided to put off the meeting with the client until Friday, not cancel it. “The client is unlikely to be pleased,” Olena remarked. They had not yet received his reply.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Who was late for the internal meeting, according to the text?",
+            "choices": {
+              "a": "Both Marko and Olena.",
+              "b": "Marko was late, but Olena was not.",
+              "c": "Olena was late, but Marko was not.",
+              "d": "Neither Marko nor Olena."
+            }
+          },
+          {
+            "id": "q2",
+            "instructions": "What did Marko most likely mean by saying “you're the very model of punctuality”?",
+            "choices": {
+              "a": "He was ironically criticizing Olena for being late.",
+              "b": "He was sincerely praising Olena for arriving on time.",
+              "c": "He was thanking Olena for reminding him of the meeting time.",
+              "d": "He was holding Olena up as an example for the other attendees to follow."
+            }
+          },
+          {
+            "id": "q3",
+            "instructions": "What does Olena mean by saying she “didn't get around to reading the email”?",
+            "choices": {
+              "a": "She read the email but disagreed with the change of time.",
+              "b": "She could not open the email because of a technical fault.",
+              "c": "She had not received the email about the time change.",
+              "d": "She had not made time to read the email."
+            }
+          },
+          {
+            "id": "q4",
+            "instructions": "Who asked whom to revise the conclusions?",
+            "choices": {
+              "a": "Olena asked Marko.",
+              "b": "Marko asked Olena.",
+              "c": "The client asked Marko.",
+              "d": "Olena asked the client."
+            }
+          },
+          {
+            "id": "q5",
+            "instructions": "What specifically concerned Marko about the report?",
+            "choices": {
+              "a": "Errors in the numerical data.",
+              "b": "Conclusions that went too far.",
+              "c": "An insufficient amount of numerical data.",
+              "d": "Conclusions that were too cautious and tentative."
+            }
+          },
+          {
+            "id": "q6",
+            "instructions": "Which action would comply with Marko's clarification about editing the report?",
+            "choices": {
+              "a": "Edit only the final paragraph, leaving the rest of the text unchanged.",
+              "b": "Rewrite the entire report, starting with the last paragraph.",
+              "c": "Correct only the figures without changing the conclusions.",
+              "d": "Leave the entire report unchanged."
+            }
+          },
+          {
+            "id": "q7",
+            "instructions": "What necessarily follows from the statement “Olena did not consider all of Marko's comments valid”?",
+            "choices": {
+              "a": "She considered every comment valid.",
+              "b": "She considered none of the comments valid.",
+              "c": "There was at least one comment she did not consider valid.",
+              "d": "She had not yet formed an opinion about any of the comments."
+            }
+          },
+          {
+            "id": "q8",
+            "instructions": "What did they decide to do about the meeting with the client?",
+            "choices": {
+              "a": "Cancel the meeting altogether.",
+              "b": "Reschedule the meeting for Friday.",
+              "c": "Arrange an additional meeting on Friday without changing the original one.",
+              "d": "Hold the meeting earlier than originally planned."
+            }
+          },
+          {
+            "id": "q9",
+            "instructions": "Which conclusion about the client's reaction is supported by the text?",
+            "choices": {
+              "a": "The client has already expressed dissatisfaction with the postponement.",
+              "b": "The client will definitely be unhappy about the postponement.",
+              "c": "The client has already agreed to the postponement.",
+              "d": "The client's response is not yet known; Olena doubts that he will be pleased."
+            }
+          }
+        ]
+      },
+      {
+        "id": "almost-en",
+        "block": "wording",
+        "language": "en",
+        "text": "Marko was almost late for the internal meeting, while Olena arrived twenty minutes after the agreed time. “Olena, you're the very model of punctuality!” he said, glancing at his watch. “I didn't get around to reading the email about the time change yesterday,” she explained. Olena was asked by Marko to revise the conclusions: it wasn't the figures in the report that concerned him, but the overly bold generalizations. “Don't rewrite the whole report: change only the last paragraph,” he clarified. Olena did not consider all of Marko's comments valid, but she did not argue. They decided to put off the meeting with the client until Friday, not cancel it. “The client is unlikely to be pleased,” Olena remarked. They had not yet received his reply.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Who was late for the internal meeting, according to the text?",
+            "choices": {
+              "a": "Both Marko and Olena.",
+              "b": "Marko was late, but Olena was not.",
+              "c": "Olena was late, but Marko was not.",
+              "d": "Neither Marko nor Olena."
+            }
+          }
+        ]
+      },
+      {
+        "id": "actually-en",
+        "block": "wording",
+        "language": "en",
+        "text": "Marko was actually late for the internal meeting, while Olena arrived twenty minutes after the agreed time. “Olena, you're the very model of punctuality!” he said, glancing at his watch. “I didn't get around to reading the email about the time change yesterday,” she explained. Olena was asked by Marko to revise the conclusions: it wasn't the figures in the report that concerned him, but the overly bold generalizations. “Don't rewrite the whole report: change only the last paragraph,” he clarified. Olena did not consider all of Marko's comments valid, but she did not argue. They decided to put off the meeting with the client until Friday, not cancel it. “The client is unlikely to be pleased,” Olena remarked. They had not yet received his reply.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Who was late for the internal meeting, according to the text?",
+            "choices": {
+              "a": "Both Marko and Olena.",
+              "b": "Marko was late, but Olena was not.",
+              "c": "Olena was late, but Marko was not.",
+              "d": "Neither Marko nor Olena."
+            }
+          }
+        ]
+      },
+      {
+        "id": "barely-en",
+        "block": "wording",
+        "language": "en",
+        "text": "Marko barely made it to the internal meeting on time, while Olena arrived twenty minutes after the agreed time. “Olena, you're the very model of punctuality!” he said, glancing at his watch. “I didn't get around to reading the email about the time change yesterday,” she explained. Olena was asked by Marko to revise the conclusions: it wasn't the figures in the report that concerned him, but the overly bold generalizations. “Don't rewrite the whole report: change only the last paragraph,” he clarified. Olena did not consider all of Marko's comments valid, but she did not argue. They decided to put off the meeting with the client until Friday, not cancel it. “The client is unlikely to be pleased,” Olena remarked. They had not yet received his reply.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Who was late for the internal meeting, according to the text?",
+            "choices": {
+              "a": "Both Marko and Olena.",
+              "b": "Marko was late, but Olena was not.",
+              "c": "Olena was late, but Marko was not.",
+              "d": "Neither Marko nor Olena."
+            }
+          }
+        ]
+      },
+      {
+        "id": "little-en",
+        "block": "wording",
+        "language": "en",
+        "text": "Marko was a little late for the internal meeting, while Olena arrived twenty minutes after the agreed time. “Olena, you're the very model of punctuality!” he said, glancing at his watch. “I didn't get around to reading the email about the time change yesterday,” she explained. Olena was asked by Marko to revise the conclusions: it wasn't the figures in the report that concerned him, but the overly bold generalizations. “Don't rewrite the whole report: change only the last paragraph,” he clarified. Olena did not consider all of Marko's comments valid, but she did not argue. They decided to put off the meeting with the client until Friday, not cancel it. “The client is unlikely to be pleased,” Olena remarked. They had not yet received his reply.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Who was late for the internal meeting, according to the text?",
+            "choices": {
+              "a": "Both Marko and Olena.",
+              "b": "Marko was late, but Olena was not.",
+              "c": "Olena was late, but Marko was not.",
+              "d": "Neither Marko nor Olena."
+            }
+          }
+        ]
+      },
+      {
+        "id": "negation-uk",
+        "block": "traps",
+        "language": "uk",
+        "text": "Уранці Марко попросив Олену надіслати клієнтові лист. Олена не забула надіслати лист перед обідом.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Що відомо про дію Олени?",
+            "choices": {
+              "a": "Вона забула про доручення.",
+              "b": "Вона надіслала лист.",
+              "c": "Вона лише запланувала надіслати лист завтра.",
+              "d": "Вона відмовилася надсилати лист."
+            }
+          }
+        ]
+      },
+      {
+        "id": "negation-en",
+        "block": "traps",
+        "language": "en",
+        "text": "In the morning, Marko asked Olena to send the client an email. Olena did not forget to send the email before lunch.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "What is known about Olena's action?",
+            "choices": {
+              "a": "She forgot about the task.",
+              "b": "She sent the email.",
+              "c": "She only planned to send the email tomorrow.",
+              "d": "She refused to send the email."
+            }
+          }
+        ]
+      },
+      {
+        "id": "condition-uk",
+        "block": "traps",
+        "language": "uk",
+        "text": "Зустріч призначено на четвер. Якщо клієнт погодиться, зустріч перенесуть на п'ятницю. Відповіді клієнта ще немає, рішення про перенесення ще не ухвалено.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Який поточний статус зустрічі?",
+            "choices": {
+              "a": "Її вже перенесли на п'ятницю.",
+              "b": "Її скасували.",
+              "c": "Вона залишається призначеною на четвер.",
+              "d": "Клієнт відхилив перенесення."
+            }
+          }
+        ]
+      },
+      {
+        "id": "condition-en",
+        "block": "traps",
+        "language": "en",
+        "text": "The meeting is scheduled for Thursday. If the client agrees, the meeting will be moved to Friday. The client has not replied yet, and no decision to reschedule has been made.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "What is the current status of the meeting?",
+            "choices": {
+              "a": "It has already been moved to Friday.",
+              "b": "It has been cancelled.",
+              "c": "It remains scheduled for Thursday.",
+              "d": "The client has rejected the change."
+            }
+          }
+        ]
+      },
+      {
+        "id": "correction-uk",
+        "block": "traps",
+        "language": "uk",
+        "text": "О 09:00 Олена написала команді, що зустріч відбудеться в четвер. О 09:15 вона надіслала виправлення: правильний день — п'ятниця, попереднє повідомлення містило помилку.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Який день зустрічі вказано в актуальному повідомленні?",
+            "choices": {
+              "a": "Середа.",
+              "b": "Четвер.",
+              "c": "День ще не визначено.",
+              "d": "П'ятниця."
+            }
+          }
+        ]
+      },
+      {
+        "id": "correction-en",
+        "block": "traps",
+        "language": "en",
+        "text": "At 09:00, Olena told the team that the meeting would take place on Thursday. At 09:15, she sent a correction: the correct day is Friday; the previous message contained a mistake.",
+        "questions": [
+          {
+            "id": "q1",
+            "instructions": "Which day is specified for the meeting in the current message?",
+            "choices": {
+              "a": "Wednesday.",
+              "b": "Thursday.",
+              "c": "The day has not been decided yet.",
+              "d": "Friday."
+            }
+          }
+        ]
+      }
+    ],
+    "answer_keys": {
+      "original-uk": {
+        "q1": "c",
+        "q2": "a",
+        "q3": "d",
+        "q4": "b",
+        "q5": "b",
+        "q6": "a",
+        "q7": "c",
+        "q8": "b",
+        "q9": "d"
+      },
+      "almost-uk": {
+        "q1": "c"
+      },
+      "actually-uk": {
+        "q1": "a"
+      },
+      "barely-uk": {
+        "q1": "c"
+      },
+      "little-uk": {
+        "q1": "a"
+      },
+      "original-en": {
+        "q1": "c",
+        "q2": "a",
+        "q3": "d",
+        "q4": "b",
+        "q5": "b",
+        "q6": "a",
+        "q7": "c",
+        "q8": "b",
+        "q9": "d"
+      },
+      "almost-en": {
+        "q1": "c"
+      },
+      "actually-en": {
+        "q1": "a"
+      },
+      "barely-en": {
+        "q1": "c"
+      },
+      "little-en": {
+        "q1": "a"
+      },
+      "negation-uk": {
+        "q1": "b"
+      },
+      "negation-en": {
+        "q1": "b"
+      },
+      "condition-uk": {
+        "q1": "c"
+      },
+      "condition-en": {
+        "q1": "c"
+      },
+      "correction-uk": {
+        "q1": "d"
+      },
+      "correction-en": {
+        "q1": "d"
+      }
+    },
+    "fingerprint": "1db58f724d1aa799899f6433598cc9f7f376675ff9fd54ec61fc6b8dee602351"
+  },
+  "images": {
+    "dataset_sha256": "1db58f724d1aa799899f6433598cc9f7f376675ff9fd54ec61fc6b8dee602351",
+    "font": {
+      "repository": "https://github.com/notofonts/noto-fonts",
+      "revision": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+      "sha256": {
+        "NotoSans-Regular.ttf": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+        "LICENSE": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+      }
+    },
+    "pillow": "12.3.0",
+    "freetype": "2.14.3",
+    "render": {
+      "width": 1200,
+      "font_size": 28,
+      "margin": 48,
+      "line_height": 40,
+      "layout": "BASIC",
+      "scale": 0.5
+    },
+    "images": {
+      "original-uk/openai-png": {
+        "path": "assets/images/original-uk-openai-png.png",
+        "sha256": "38d56a4abc2f9136de918740ccc59b283cf1cd23a5edcbcd5f4e3b02dc314fe3",
+        "width": 1200,
+        "height": 456
+      },
+      "original-uk/openai-png-small": {
+        "path": "assets/images/original-uk-openai-png-small.png",
+        "sha256": "28860227a49de2e5e7ac67e36d9fccd6f924892df73f6aedbc83815801783dae",
+        "width": 600,
+        "height": 228
+      },
+      "original-en/openai-png": {
+        "path": "assets/images/original-en-openai-png.png",
+        "sha256": "3de837097f5132554cb99350762ebb33d0691d31732d989d1fe012318f6eca5c",
+        "width": 1200,
+        "height": 496
+      },
+      "original-en/openai-png-small": {
+        "path": "assets/images/original-en-openai-png-small.png",
+        "sha256": "01e24c50fc3ec380a0d34e7ab2d47387672d76d81030be0862e392bdbcb5565b",
+        "width": 600,
+        "height": 248
+      },
+      "negation-uk/openai-png": {
+        "path": "assets/images/negation-uk-openai-png.png",
+        "sha256": "a6d457862cd36b1c2d1f327a618daf1338f5e5445359bd47090b0aff6b9eefe1",
+        "width": 1200,
+        "height": 176
+      },
+      "negation-uk/openai-png-small": {
+        "path": "assets/images/negation-uk-openai-png-small.png",
+        "sha256": "14c719b23be2cbe4f1c81be462cd17a7e4508c5c2d713fd99be6d2f4c7e0b05d",
+        "width": 600,
+        "height": 88
+      },
+      "negation-en/openai-png": {
+        "path": "assets/images/negation-en-openai-png.png",
+        "sha256": "ec6eb3d3a76df415bd33c3e61882a0f835b0bbd27ee046fa39f77a37036c616d",
+        "width": 1200,
+        "height": 176
+      },
+      "negation-en/openai-png-small": {
+        "path": "assets/images/negation-en-openai-png-small.png",
+        "sha256": "6a514cc341cef1e3568e740a90aa86f8b4d70d0ed1cf2769d54c47fee21e63cb",
+        "width": 600,
+        "height": 88
+      },
+      "condition-uk/openai-png": {
+        "path": "assets/images/condition-uk-openai-png.png",
+        "sha256": "4128be40bc40729d703461f729b7791cffed1da972f94949242937b56774888b",
+        "width": 1200,
+        "height": 216
+      },
+      "condition-uk/openai-png-small": {
+        "path": "assets/images/condition-uk-openai-png-small.png",
+        "sha256": "837f4b1145a0645f870bc025f9aa0c93dd3feec19fd2ea519503a17b5194cd19",
+        "width": 600,
+        "height": 108
+      },
+      "condition-en/openai-png": {
+        "path": "assets/images/condition-en-openai-png.png",
+        "sha256": "71cbc4edfbcc92e8a8116ec0177ecb9eb7fb200d80de8762ec68d32c72bd7f0e",
+        "width": 1200,
+        "height": 216
+      },
+      "condition-en/openai-png-small": {
+        "path": "assets/images/condition-en-openai-png-small.png",
+        "sha256": "9ff7455c6f2daecde128540f1ec845e1fb8d7d42914823777243d619b45c0083",
+        "width": 600,
+        "height": 108
+      },
+      "correction-uk/openai-png": {
+        "path": "assets/images/correction-uk-openai-png.png",
+        "sha256": "98af4bb0164065ad27fb8f721e81f5b0730a79f584cd5e0ad83b1ee8e89a24e5",
+        "width": 1200,
+        "height": 216
+      },
+      "correction-uk/openai-png-small": {
+        "path": "assets/images/correction-uk-openai-png-small.png",
+        "sha256": "eba26f7f4954438c86c3b05dff7cfe6b0139b9cf1d58bc10f1fb37fc30b256fe",
+        "width": 600,
+        "height": 108
+      },
+      "correction-en/openai-png": {
+        "path": "assets/images/correction-en-openai-png.png",
+        "sha256": "06f3319bf9d90eaa3848c93607f4a0207460b8551c023c04252df56d212171a5",
+        "width": 1200,
+        "height": 216
+      },
+      "correction-en/openai-png-small": {
+        "path": "assets/images/correction-en-openai-png-small.png",
+        "sha256": "3609986f82b7f92d7cc79a29eba4c600b1ccf3ece17a8e5943a3d2fa38c94bd8",
+        "width": 600,
+        "height": 108
+      }
+    }
+  },
+  "python": "3.14.5",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "httpx": "0.28.1",
+    "pillow": "12.3.0",
+    "matplotlib": "3.11.2",
+    "python-dotenv": "1.2.4"
+  },
+  "git_commit": "53bf4a1524a4332ad6c70cc3a5b775ed20dcc17e",
+  "code_sha256": {
+    "__init__.py": "23b3c22612325858c4490dc5dbe756a14734da9fa1bed5bebdb00f91f2c31fde",
+    "cli.py": "beec109275ef8eebda04b321336332a783d890a3b4c01c17a41186ec65331efa",
+    "data.py": "450e4c8ec9df5f4c2bc26d9ddfeb2b5fe76bcebf821ad9e1030c989c59bcb30b",
+    "images.py": "43a8376963c78688da9093697e44e56b1da81c2bafc0a5341aab225c79dde21e",
+    "providers.py": "73a83ed095cefbd5a9b2a6c004e1cd0cedf32eff7f7a56f9c67bccdd6bb4e18c",
+    "report.py": "1834ed0f569dc8d35c4cae2b884a777c6590574387e012851df4d218cb3a3294",
+    "runner.py": "0a8e4d5b297c7efa7481849762359b7f77ee0d5835628801b52b13236c952364"
+  },
+  "uv_lock_sha256": "2e1770a1e0ac42fd93db93c3b642b64c9e979504b7cd696fab3f2e16c1e60689",
+  "warmup_only": false,
+  "schedule": [
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 0,
+      "phase": "warmup"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 1,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 2,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 3,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 4,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 5,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 6,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 7,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 8,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 9,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-uk",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-en",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "correction-en",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "original-uk",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-en",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "condition-en",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "little-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-en",
+      "mode": "openai-png-small",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "almost-uk",
+      "mode": "openai-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "negation-uk",
+      "mode": "openai-png",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "actually-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    },
+    {
+      "example_id": "barely-uk",
+      "mode": "jev-text",
+      "repetition": 10,
+      "phase": "measurement"
+    }
+  ],
+  "completed_requests": 488,
+  "forecast": {
+    "measurement_cost_usd_proxy": 0.07313104,
+    "unknown_conditions": [],
+    "method": "Baseline request cost × scheduled requests per language/mode. Rough proxy, not an upper bound; wording/traps have fewer questions."
+  },
+  "finished_at": "2026-10-09T12:20:07.947148+00:00"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "negation-uk", "language": "uk",
+    "text": "Уранці Марко попросив Олену надіслати клієнтові лист. Олена не забула надіслати лист перед обідом.",
+    "question": "Що відомо про дію Олени?",
+    "choices": {"a": "Вона забула про доручення.", "b": "Вона надіслала лист.", "c": "Вона лише запланувала надіслати лист завтра.", "d": "Вона відмовилася надсилати лист."}
+  },
+  {
+    "id": "negation-en", "language": "en",
+    "text": "In the morning, Marko asked Olena to send the client an email. Olena did not forget to send the email before lunch.",
+    "question": "What is known about Olena's action?",
+    "choices": {"a": "She forgot about the task.", "b": "She sent the email.", "c": "She only planned to send the email tomorrow.", "d": "She refused to send the email."}
+  },
+  {
+    "id": "condition-uk", "language": "uk",
+    "text": "Зустріч призначено на четвер. Якщо клієнт погодиться, зустріч перенесуть на п'ятницю. Відповіді клієнта ще немає, рішення про перенесення ще не ухвалено.",
+    "question": "Який поточний статус зустрічі?",
+    "choices": {"a": "Її вже перенесли на п'ятницю.", "b": "Її скасували.", "c": "Вона залишається призначеною на четвер.", "d": "Клієнт відхилив перенесення."}
+  },
+  {
+    "id": "condition-en", "language": "en",
+    "text": "The meeting is scheduled for Thursday. If the client agrees, the meeting will be moved to Friday. The client has not replied yet, and no decision to reschedule has been made.",
+    "question": "What is the current status of the meeting?",
+    "choices": {"a": "It has already been moved to Friday.", "b": "It has been cancelled.", "c": "It remains scheduled for Thursday.", "d": "The client has rejected the change."}
+  },
+  {
+    "id": "correction-uk", "language": "uk",
+    "text": "О 09:00 Олена написала команді, що зустріч відбудеться в четвер. О 09:15 вона надіслала виправлення: правильний день — п'ятниця, попереднє повідомлення містило помилку.",
+    "question": "Який день зустрічі вказано в актуальному повідомленні?",
+    "choices": {"a": "Середа.", "b": "Четвер.", "c": "День ще не визначено.", "d": "П'ятниця."}
+  },
+  {
+    "id": "correction-en", "language": "en",
+    "text": "At 09:00, Olena told the team that the meeting would take place on Thursday. At 09:15, she sent a correction: the correct day is Friday; the previous message contained a mistake.",
+    "question": "Which day is specified for the meeting in the current message?",
+    "choices": {"a": "Wednesday.", "b": "Thursday.", "c": "The day has not been decided yet.", "d": "Friday."}
+  }
+]

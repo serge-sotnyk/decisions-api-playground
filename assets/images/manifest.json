@@ -1,0 +1,119 @@
+{
+  "dataset_sha256": "1db58f724d1aa799899f6433598cc9f7f376675ff9fd54ec61fc6b8dee602351",
+  "font": {
+    "repository": "https://github.com/notofonts/noto-fonts",
+    "revision": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+    "sha256": {
+      "NotoSans-Regular.ttf": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+      "LICENSE": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+    }
+  },
+  "pillow": "12.3.0",
+  "freetype": "2.14.3",
+  "render": {
+    "width": 1200,
+    "font_size": 28,
+    "margin": 48,
+    "line_height": 40,
+    "layout": "BASIC",
+    "scale": 0.5
+  },
+  "images": {
+    "original-uk/openai-png": {
+      "path": "assets/images/original-uk-openai-png.png",
+      "sha256": "38d56a4abc2f9136de918740ccc59b283cf1cd23a5edcbcd5f4e3b02dc314fe3",
+      "width": 1200,
+      "height": 456
+    },
+    "original-uk/openai-png-small": {
+      "path": "assets/images/original-uk-openai-png-small.png",
+      "sha256": "28860227a49de2e5e7ac67e36d9fccd6f924892df73f6aedbc83815801783dae",
+      "width": 600,
+      "height": 228
+    },
+    "original-en/openai-png": {
+      "path": "assets/images/original-en-openai-png.png",
+      "sha256": "3de837097f5132554cb99350762ebb33d0691d31732d989d1fe012318f6eca5c",
+      "width": 1200,
+      "height": 496
+    },
+    "original-en/openai-png-small": {
+      "path": "assets/images/original-en-openai-png-small.png",
+      "sha256": "01e24c50fc3ec380a0d34e7ab2d47387672d76d81030be0862e392bdbcb5565b",
+      "width": 600,
+      "height": 248
+    },
+    "negation-uk/openai-png": {
+      "path": "assets/images/negation-uk-openai-png.png",
+      "sha256": "a6d457862cd36b1c2d1f327a618daf1338f5e5445359bd47090b0aff6b9eefe1",
+      "width": 1200,
+      "height": 176
+    },
+    "negation-uk/openai-png-small": {
+      "path": "assets/images/negation-uk-openai-png-small.png",
+      "sha256": "14c719b23be2cbe4f1c81be462cd17a7e4508c5c2d713fd99be6d2f4c7e0b05d",
+      "width": 600,
+      "height": 88
+    },
+    "negation-en/openai-png": {
+      "path": "assets/images/negation-en-openai-png.png",
+      "sha256": "ec6eb3d3a76df415bd33c3e61882a0f835b0bbd27ee046fa39f77a37036c616d",
+      "width": 1200,
+      "height": 176
+    },
+    "negation-en/openai-png-small": {
+      "path": "assets/images/negation-en-openai-png-small.png",
+      "sha256": "6a514cc341cef1e3568e740a90aa86f8b4d70d0ed1cf2769d54c47fee21e63cb",
+      "width": 600,
+      "height": 88
+    },
+    "condition-uk/openai-png": {
+      "path": "assets/images/condition-uk-openai-png.png",
+      "sha256": "4128be40bc40729d703461f729b7791cffed1da972f94949242937b56774888b",
+      "width": 1200,
+      "height": 216
+    },
+    "condition-uk/openai-png-small": {
+      "path": "assets/images/condition-uk-openai-png-small.png",
+      "sha256": "837f4b1145a0645f870bc025f9aa0c93dd3feec19fd2ea519503a17b5194cd19",
+      "width": 600,
+      "height": 108
+    },
+    "condition-en/openai-png": {
+      "path": "assets/images/condition-en-openai-png.png",
+      "sha256": "71cbc4edfbcc92e8a8116ec0177ecb9eb7fb200d80de8762ec68d32c72bd7f0e",
+      "width": 1200,
+      "height": 216
+    },
+    "condition-en/openai-png-small": {
+      "path": "assets/images/condition-en-openai-png-small.png",
+      "sha256": "9ff7455c6f2daecde128540f1ec845e1fb8d7d42914823777243d619b45c0083",
+      "width": 600,
+      "height": 108
+    },
+    "correction-uk/openai-png": {
+      "path": "assets/images/correction-uk-openai-png.png",
+      "sha256": "98af4bb0164065ad27fb8f721e81f5b0730a79f584cd5e0ad83b1ee8e89a24e5",
+      "width": 1200,
+      "height": 216
+    },
+    "correction-uk/openai-png-small": {
+      "path": "assets/images/correction-uk-openai-png-small.png",
+      "sha256": "eba26f7f4954438c86c3b05dff7cfe6b0139b9cf1d58bc10f1fb37fc30b256fe",
+      "width": 600,
+      "height": 108
+    },
+    "correction-en/openai-png": {
+      "path": "assets/images/correction-en-openai-png.png",
+      "sha256": "06f3319bf9d90eaa3848c93607f4a0207460b8551c023c04252df56d212171a5",
+      "width": 1200,
+      "height": 216
+    },
+    "correction-en/openai-png-small": {
+      "path": "assets/images/correction-en-openai-png-small.png",
+      "sha256": "3609986f82b7f92d7cc79a29eba4c600b1ccf3ece17a8e5943a3d2fa38c94bd8",
+      "width": 600,
+      "height": 108
+    }
+  }
+}
