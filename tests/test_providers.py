@@ -33,6 +33,22 @@ def test_request_adapters_and_no_image_text_leak(example):
     assert set(o) == {"input", "model", "questions"}
 
 
+@pytest.mark.parametrize("prefix,model", [("jev13", "jev-1.13.0"), ("jev14", "jev-1.14.0")])
+def test_jev_images_keep_questions_and_exclude_source_text(example, prefix, model):
+    text = payload(example, f"{prefix}-text", model)
+    for kind in ("png", "png-small"):
+        body = payload(example, f"{prefix}-{kind}", model, b"png-bytes")
+        assert body["questions"] == text["questions"]
+        assert example.text not in json.dumps(body, ensure_ascii=False)
+        assert set(body) == {"model", "state", "questions", "assets"}
+        ref = body["state"]["text"]
+        assert list(body["assets"]) == [ref]
+        asset = body["assets"][ref]
+        assert asset["format"] == "png"
+        assert base64.b64decode(asset["data_base64"]) == b"png-bytes"
+        assert "cG5nLWJ5dGVz" not in json.dumps(redact(body, []))
+
+
 @pytest.mark.parametrize("provider", ["jev", "openai"])
 def test_fixture_normalization_matches_names_not_order(provider, example):
     raw = read_json(ROOT / f"tests/fixtures/{provider}.json")

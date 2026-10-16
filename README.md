@@ -3,22 +3,26 @@
 A small reproducible experiment comparing Ukrainian and English, plain text and synthetic images of text.
 A continuation of the [earlier Jev experiment](https://www.linkedin.com/pulse/jev-та-українська-невеличкий-тест-serge-sotnyk-juxhf/).
 
-**Status:** the 2026-10-09 live run is complete: 480 measured requests and 8 warmups, with no API errors or refusals.
-Read the [findings](docs/findings.md) and the [full report](results/published/20261009-main/report.md).
-Usage-based cost at the recorded tariffs was **\$0.025779678**, including warmups.
+**Status:** the October 16 follow-up is complete: 480 measurements plus 18 warmups,
+all successful, using Jev 1.13, Jev 1.14, and Decisions with the same padded PNGs
+and five repetitions. Total usage-based cost: \$0.028282918.
+See the [new findings](docs/findings-20261016.md),
+[new report](results/published/20261016-main/report.md), and
+[current methodology](docs/methodology.md). The [October 9 findings](docs/findings.md)
+and [October 9 report](results/published/20261009-main/report.md) remain unchanged.
 The responses in `tests/fixtures` are synthetic contract fixtures, not model performance measurements.
 
 ## Experiment matrix
 
-| Block | Ukrainian + English | Modes | Requests with 10 repetitions |
+| Block | Ukrainian + English | Modes per model | Requests with 5 repetitions |
 |---|---|---|---:|
-| `original` | Original passage, all 9 questions together | Jev text; Decisions text; PNG; PNG × 0.5 | 80 |
-| `wording` | Four opening variants, full passage, q1 only | Jev text; Decisions text | 160 |
-| `traps` | Negated action, condition versus fact, corrected information | All four modes | 240 |
+| `original` | Original passage, all 9 questions together | Text; PNG; small PNG | 90 |
+| `wording` | Four opening variants, full passage, q1 only | Text | 120 |
+| `traps` | Negated action, condition versus fact, corrected information | Text; PNG; small PNG | 270 |
 
-A full run contains **480 measured requests + 8 warmups**, yielding 1,120 measured question attempts.
-Repetitions reuse fixed examples; they are not 1,120 independent tasks.
-Models: `jev-1.13.0` and OpenAI Decisions `gpt-6-luna`.
+Models: `jev-1.13.0`, `jev-1.14.0`, and OpenAI Decisions `gpt-6-luna`.
+A full run contains **480 measured requests + 18 warmups**, yielding 1,200 measured
+question attempts. Repetitions reuse fixed examples, not independent tasks.
 
 ## Quick start
 
@@ -41,12 +45,12 @@ uv run --locked decisions-playground run --dry-run
 ```
 
 Before a paid run, compare the [Jev tariff](https://docs.typesafe.ai/models) and
-[Decisions tariff](https://developers.openai.com/api/docs/guides/decisions) with `data/pricing.json`.
+[Decisions tariff](https://developers.openai.com/api/docs/guides/decisions) with `data/pricing-20261016.json`.
 The file records the verification date, model, source, and USD per million input tokens.
 The recorded base rates are \$0.042 and \$0.10 respectively; output is free.
 For regional premiums, provide the applicable rate in a separate file using `--pricing`.
 
-Optionally run only the eight initial checks and inspect the rough full-run cost forecast:
+Optionally run only the 18 initial checks and inspect the rough full-run cost forecast:
 
 ```sh
 uv run --locked decisions-playground run --warmup-only
@@ -58,7 +62,7 @@ The full experiment performs its own warmup, prints a forecast, and continues wi
 uv run --locked decisions-playground run
 ```
 
-A separate `--warmup-only` invocation adds eight calls in a separate run.
+A separate `--warmup-only` invocation adds 18 calls in a separate run.
 Missing usage makes the forecast unknown, not zero. The forecast uses the nine-question baseline
 cost as a proxy for each condition; it is neither an exact estimate nor a guaranteed upper bound.
 
@@ -70,9 +74,9 @@ uv run --locked decisions-playground run --provider jev --block wording
 uv run --locked decisions-playground run --provider openai --block traps
 ```
 
-Options include `--seed` (default 20261009), `--timeout` (30 seconds per network operation),
+Options include `--seed` (default 20261016), `--timeout` (30 seconds per network operation),
 `--pricing`, and `--output` (a new directory). Existing run directories are never overwritten.
-A single-provider run needs only that provider's key. Model names can be changed in `.env`,
+A single-provider run needs only that provider's key. Use `--model jev13`, `--model jev14`, or `--model openai` to select one arm. `--provider jev` selects both Jev versions. Model names can be changed with `JEV13_MODEL`, `JEV14_MODEL`, and `OPENAI_MODEL` in `.env` (the old `JEV_MODEL` is ignored),
 but the pricing file must explicitly match the selected models.
 
 ## Results and publication
@@ -114,7 +118,7 @@ revision `2cdd6f213390fe86c9c147c4359fedb4ca90f2a0`.
 Checksums are verified when loading data. New traps and their separate answer keys were written before live runs.
 Model requests never include the answer key or historical results.
 
-All 16 PNGs are included in the repository; `prepare` rebuilds them. Noto Sans, its OFL license,
+The original 16 PNGs remain in `assets/images/`; `prepare` derives 16 shared PNGs in `assets/images-padded/` by adding white margins to meet the 280 px minimum without changing text pixels. Noto Sans, its OFL license,
 and pinned provenance are in `assets/fonts`. Image hashes and dataset consistency are checked before runs.
 See the [methodology](docs/methodology.md) for details.
 

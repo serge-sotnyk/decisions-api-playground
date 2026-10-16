@@ -61,13 +61,16 @@ def execute(
     images: dict[str, Any],
     secrets: list[str],
 ) -> tuple[dict[str, Any], bool]:
-    image = images.get("images", {}).get(f"{example.id}/{trial.mode}")
+    image = images.get("images", {}).get(f"{example.id}/{trial.input_mode}")
+    if image is None:
+        image = images.get("images", {}).get(f"{example.id}/{trial.mode}")
     png = (root / image["path"]).read_bytes() if image else None
     body = payload(example, trial.mode, model, png)
     # Serialize and build before timing; only HTTP transport / response download are timed.
-    request = client.build_request(
-        "POST", ENDPOINTS[trial.provider], json=body, headers={"Authorization": f"Bearer {key}"}
-    )
+    headers = {"Authorization": f"Bearer {key}"}
+    if trial.provider == "jev" and trial.input_mode != "text":
+        headers["TypeSafe-Danger-Zone-Images"] = "true"
+    request = client.build_request("POST", ENDPOINTS[trial.provider], json=body, headers=headers)
     record: dict[str, Any] = {
         **asdict(trial),
         "provider": trial.provider,
@@ -110,6 +113,9 @@ def execute(
     record["usage"] = raw.get("usage") if isinstance(raw, dict) else None
     record["input_tokens"] = input_tokens(raw)
     record["cost_usd"] = cost(record["input_tokens"], rate)
+    if record["returned_model"] is not None and record["returned_model"] != model:
+        record["error"] = {"kind": "model_mismatch", "expected": model}
+        return redact(record, secrets), True
     try:
         record["answers"] = normalize(raw, trial.provider, example)
     except SchemaError as exc:
@@ -155,7 +161,7 @@ def run_experiment(
     for provider in providers:
         if not keys.get(provider, "").strip():
             raise ValueError(f"Missing API key for {provider}. Fill .env using .env.example.")
-    validate_pricing(pricing, models, providers)
+    validate_pricing(pricing, models, {t.model_key for t in warmups + schedule})
     output.mkdir(parents=True, exist_ok=False)
     try:
         commit = subprocess.check_output(
@@ -165,7 +171,7 @@ def run_experiment(
         commit = None
     code_files = sorted((root / "src/decisions_playground").glob("*.py"))
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "execution": "mock" if transport is not None else "live",
         "created_at": now(),
         "status": "running",
@@ -207,12 +213,12 @@ def run_experiment(
         ):
             for index, trial in enumerate(trials, 1):
                 e = examples[trial.example_id]
-                rate = pricing["providers"][trial.provider]["input_per_million"]
+                rate = pricing["providers"][trial.model_key]["input_per_million"]
                 record, fatal = execute(
                     client,
                     trial,
                     e,
-                    models[trial.provider],
+                    models[trial.model_key],
                     keys[trial.provider],
                     rate,
                     root,

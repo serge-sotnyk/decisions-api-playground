@@ -9,7 +9,8 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
-MODES = ("jev-text", "openai-text", "openai-png", "openai-png-small")
+MODEL_IDS = {"jev13": "jev-1.13.0", "jev14": "jev-1.14.0", "openai": "gpt-6-luna"}
+MODES = tuple(f"{model}-{kind}" for model in MODEL_IDS for kind in ("text", "png", "png-small"))
 
 
 def digest(data: bytes) -> str:
@@ -63,7 +64,15 @@ class Trial:
 
     @property
     def provider(self) -> str:
+        return "jev" if self.model_key.startswith("jev") else self.model_key
+
+    @property
+    def model_key(self) -> str:
         return self.mode.split("-", 1)[0]
+
+    @property
+    def input_mode(self) -> str:
+        return self.mode.split("-", 1)[1]
 
 
 def verify_files(directory: Path) -> dict[str, Any]:
@@ -131,10 +140,11 @@ def load_dataset(root: Path = ROOT) -> Dataset:
 
 def matrix(
     dataset: Dataset,
-    repeats: int = 10,
-    seed: int = 20261009,
+    repeats: int = 5,
+    seed: int = 20261016,
     block: str = "all",
     provider: str = "all",
+    model: str = "all",
 ) -> tuple[list[Trial], list[Trial]]:
     if repeats < 1:
         raise ValueError("Repeats must be positive")
@@ -143,7 +153,8 @@ def matrix(
         for e in dataset.examples
         for mode in MODES
         if (block == "all" or e.block == block)
-        and (provider == "all" or mode.startswith(provider + "-"))
+        and (provider == "all" or Trial(e.id, mode, 0).provider == provider)
+        and (model == "all" or mode.startswith(model + "-"))
         and (e.block != "wording" or mode.endswith("text"))
     ]
     if not conditions:

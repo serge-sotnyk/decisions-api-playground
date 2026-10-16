@@ -5,12 +5,12 @@ from typing import Any
 import httpx
 import pytest
 
-from decisions_playground.data import ROOT, Trial, load_dataset, matrix, read_json
+from decisions_playground.data import MODEL_IDS, ROOT, Trial, load_dataset, matrix, read_json
 from decisions_playground.images import load_images
 from decisions_playground.report import confidence_section, generate_report, summarize
 from decisions_playground.runner import cost, execute, forecast, run_experiment
 
-MODELS = {"jev": "jev-1.13.0", "openai": "gpt-6-luna"}
+MODELS = {**MODEL_IDS, "jev": "jev-1.13.0"}
 KEYS = {"jev": "TEST_SECRET_JEV", "openai": "TEST_SECRET_OPENAI"}
 
 
@@ -18,6 +18,8 @@ def fake_response(request: httpx.Request) -> httpx.Response:
     """Synthetic contract stub, intentionally always chooses a; never benchmark evidence."""
     body = json.loads(request.content)
     is_jev = "state" in body
+    if is_jev:
+        assert (request.headers.get("TypeSafe-Danger-Zone-Images") == "true") == ("assets" in body)
     names = list(body["questions"]) if is_jev else [q["name"] for q in body["questions"]]
     answers: list[dict[str, Any]] = [
         {
@@ -59,10 +61,10 @@ def completed_run(tmp_path):
         schedule,
         MODELS,
         KEYS,
-        read_json(ROOT / "data/pricing.json"),
+        read_json(ROOT / "data/pricing-20261016.json"),
         load_images(data),
         output,
-        20261009,
+        20261016,
         30,
         transport=httpx.MockTransport(fake_response),
     )
@@ -72,17 +74,32 @@ def completed_run(tmp_path):
 
 def test_full_matrix_offline_run_and_report(completed_run, tmp_path, monkeypatch):
     output, manifest, records = completed_run
-    assert len(records) == 488
+    assert len(records) == 498
     assert manifest["status"] == "complete" and manifest["execution"] == "mock"
     text = (output / "records.jsonl").read_text()
     assert all(secret not in text for secret in KEYS.values())
     assert "base64," not in text and "Authorization" not in text
     summary = summarize(manifest, records)
     assert summary["measurement_requests"] == 480
-    assert summary["warmup_requests"] == 8
-    assert len(summary["groups"]) == 20
-    assert sum(g["question_attempts"] for g in summary["groups"]) == 1120
-    assert summary["known_total_cost_usd"] == pytest.approx(162 * 0.000042 + 326 * 0.0001)
+    assert summary["warmup_requests"] == 18
+    assert len(summary["groups"]) == 42
+    assert sum(g["question_attempts"] for g in summary["groups"]) == 1200
+    assert summary["known_total_cost_usd"] == pytest.approx(332 * 0.000042 + 166 * 0.0001)
+    for key, model in MODEL_IDS.items():
+        selected = [r for r in records if r["mode"].startswith(key + "-")]
+        assert len(selected) == 166
+        assert {r["requested_model"] for r in selected} == {model}
+    # The exact same files, hashes and sizes are used across all three models.
+    for example in ("original-uk", "negation-en"):
+        for kind in ("png", "png-small"):
+            rows = [
+                r
+                for r in records
+                if r["example_id"] == example and r["mode"].split("-", 1)[1] == kind
+            ]
+            assert len({r["image"]["sha256"] for r in rows}) == 1
+    confidence = "\n".join(confidence_section(manifest, records))
+    assert "| jev-1.13.0 |" in confidence and "| jev-1.14.0 |" in confidence
 
     # Reporting must not initialize an HTTP client or read any key.
     def forbid_network(*args, **kwargs):
@@ -202,6 +219,11 @@ def test_timeout_and_schema_failure_are_recorded():
 
     for handler, fatal, kind in (
         (timeout, False, "ReadTimeout"),
+        (
+            lambda r: httpx.Response(200, json={"model": "unexpected-model", "answers": {}}),
+            True,
+            "model_mismatch",
+        ),
         (lambda r: httpx.Response(200, json={"answers": []}), True, "response_schema"),
     ):
         with httpx.Client(transport=httpx.MockTransport(handler)) as client:
@@ -231,8 +253,8 @@ def test_fatal_stops_and_keeps_record(tmp_path):
         schedule,
         MODELS,
         KEYS,
-        read_json(ROOT / "data/pricing.json"),
-        {},
+        read_json(ROOT / "data/pricing-20261016.json"),
+        load_images(data),
         output,
         1,
         30,
@@ -253,7 +275,7 @@ def test_cost_and_forecast_unknown():
     _, schedule = matrix(data, repeats=1, provider="jev")
     result = forecast([], schedule, {e.id: e for e in data.examples})
     assert result["measurement_cost_usd_proxy"] is None
-    assert len(result["unknown_conditions"]) == 2
+    assert len(result["unknown_conditions"]) == 12
 
 
 def test_missing_keys_fails_before_writing(tmp_path):
@@ -267,7 +289,7 @@ def test_missing_keys_fails_before_writing(tmp_path):
             schedule,
             MODELS,
             {},
-            read_json(ROOT / "data/pricing.json"),
+            read_json(ROOT / "data/pricing-20261016.json"),
             {},
             tmp_path / "none",
             1,

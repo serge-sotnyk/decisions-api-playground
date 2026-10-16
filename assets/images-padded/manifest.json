@@ -1,0 +1,316 @@
+{
+  "dataset_sha256": "1db58f724d1aa799899f6433598cc9f7f376675ff9fd54ec61fc6b8dee602351",
+  "source_manifest_sha256": "be0fd41ad163577b246de58276c609e2936381278cebbb118b533ae51ac21c80",
+  "font": {
+    "repository": "https://github.com/notofonts/noto-fonts",
+    "revision": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+    "sha256": {
+      "NotoSans-Regular.ttf": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+      "LICENSE": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+    }
+  },
+  "pillow": "12.3.0",
+  "render": {
+    "source_render": {
+      "width": 1200,
+      "font_size": 28,
+      "margin": 48,
+      "line_height": 40,
+      "layout": "BASIC",
+      "scale": 0.5
+    },
+    "minimum_side": 280,
+    "padding": "white, centered, applied after original 50% downsampling",
+    "resampling": "none; source pixels preserved"
+  },
+  "images": {
+    "original-uk/png": {
+      "path": "assets/images-padded/original-uk-png.png",
+      "sha256": "38d56a4abc2f9136de918740ccc59b283cf1cd23a5edcbcd5f4e3b02dc314fe3",
+      "width": 1200,
+      "height": 456,
+      "source": {
+        "path": "assets/images/original-uk-openai-png.png",
+        "sha256": "38d56a4abc2f9136de918740ccc59b283cf1cd23a5edcbcd5f4e3b02dc314fe3",
+        "width": 1200,
+        "height": 456
+      },
+      "padding": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      }
+    },
+    "original-uk/png-small": {
+      "path": "assets/images-padded/original-uk-png-small.png",
+      "sha256": "2f473f0de4887d50e47f8714672832896c58d2edfc5da49d4d96500dc5fc6c51",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/original-uk-openai-png-small.png",
+        "sha256": "28860227a49de2e5e7ac67e36d9fccd6f924892df73f6aedbc83815801783dae",
+        "width": 600,
+        "height": 228
+      },
+      "padding": {
+        "left": 0,
+        "top": 26,
+        "right": 0,
+        "bottom": 26
+      }
+    },
+    "original-en/png": {
+      "path": "assets/images-padded/original-en-png.png",
+      "sha256": "3de837097f5132554cb99350762ebb33d0691d31732d989d1fe012318f6eca5c",
+      "width": 1200,
+      "height": 496,
+      "source": {
+        "path": "assets/images/original-en-openai-png.png",
+        "sha256": "3de837097f5132554cb99350762ebb33d0691d31732d989d1fe012318f6eca5c",
+        "width": 1200,
+        "height": 496
+      },
+      "padding": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      }
+    },
+    "original-en/png-small": {
+      "path": "assets/images-padded/original-en-png-small.png",
+      "sha256": "9b4ac576fa5d24518503e3a2d1eb56dc72846c75664e5158441ea2e49042e82e",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/original-en-openai-png-small.png",
+        "sha256": "01e24c50fc3ec380a0d34e7ab2d47387672d76d81030be0862e392bdbcb5565b",
+        "width": 600,
+        "height": 248
+      },
+      "padding": {
+        "left": 0,
+        "top": 16,
+        "right": 0,
+        "bottom": 16
+      }
+    },
+    "negation-uk/png": {
+      "path": "assets/images-padded/negation-uk-png.png",
+      "sha256": "006af4324fe683087a09af9b4b5c1c761f21bb8c407346d5cd4f1112c2c2dca2",
+      "width": 1200,
+      "height": 280,
+      "source": {
+        "path": "assets/images/negation-uk-openai-png.png",
+        "sha256": "a6d457862cd36b1c2d1f327a618daf1338f5e5445359bd47090b0aff6b9eefe1",
+        "width": 1200,
+        "height": 176
+      },
+      "padding": {
+        "left": 0,
+        "top": 52,
+        "right": 0,
+        "bottom": 52
+      }
+    },
+    "negation-uk/png-small": {
+      "path": "assets/images-padded/negation-uk-png-small.png",
+      "sha256": "ff1f5e3aec3098a4c818f84a1ab3af12a58288e79c894fbc9d78c694498a24e2",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/negation-uk-openai-png-small.png",
+        "sha256": "14c719b23be2cbe4f1c81be462cd17a7e4508c5c2d713fd99be6d2f4c7e0b05d",
+        "width": 600,
+        "height": 88
+      },
+      "padding": {
+        "left": 0,
+        "top": 96,
+        "right": 0,
+        "bottom": 96
+      }
+    },
+    "negation-en/png": {
+      "path": "assets/images-padded/negation-en-png.png",
+      "sha256": "5b5ef50335ccb6550d4fc5e6b38e4390274a0b8ed3c5ee8abe4c49b4fa133de7",
+      "width": 1200,
+      "height": 280,
+      "source": {
+        "path": "assets/images/negation-en-openai-png.png",
+        "sha256": "ec6eb3d3a76df415bd33c3e61882a0f835b0bbd27ee046fa39f77a37036c616d",
+        "width": 1200,
+        "height": 176
+      },
+      "padding": {
+        "left": 0,
+        "top": 52,
+        "right": 0,
+        "bottom": 52
+      }
+    },
+    "negation-en/png-small": {
+      "path": "assets/images-padded/negation-en-png-small.png",
+      "sha256": "b849a21e8818220032bca588357a5af75c57c9580c62845e4fbfaa5d91dff57d",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/negation-en-openai-png-small.png",
+        "sha256": "6a514cc341cef1e3568e740a90aa86f8b4d70d0ed1cf2769d54c47fee21e63cb",
+        "width": 600,
+        "height": 88
+      },
+      "padding": {
+        "left": 0,
+        "top": 96,
+        "right": 0,
+        "bottom": 96
+      }
+    },
+    "condition-uk/png": {
+      "path": "assets/images-padded/condition-uk-png.png",
+      "sha256": "f56541e5ddc5fb0de8f25c3ab0c131c2efbb404e5f88a0503853f6825917c6ff",
+      "width": 1200,
+      "height": 280,
+      "source": {
+        "path": "assets/images/condition-uk-openai-png.png",
+        "sha256": "4128be40bc40729d703461f729b7791cffed1da972f94949242937b56774888b",
+        "width": 1200,
+        "height": 216
+      },
+      "padding": {
+        "left": 0,
+        "top": 32,
+        "right": 0,
+        "bottom": 32
+      }
+    },
+    "condition-uk/png-small": {
+      "path": "assets/images-padded/condition-uk-png-small.png",
+      "sha256": "1f994b214161b8e1e753a6f4e5071a4f6e6ae786a424bc03584e587eb2fb88d8",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/condition-uk-openai-png-small.png",
+        "sha256": "837f4b1145a0645f870bc025f9aa0c93dd3feec19fd2ea519503a17b5194cd19",
+        "width": 600,
+        "height": 108
+      },
+      "padding": {
+        "left": 0,
+        "top": 86,
+        "right": 0,
+        "bottom": 86
+      }
+    },
+    "condition-en/png": {
+      "path": "assets/images-padded/condition-en-png.png",
+      "sha256": "46d96a0d4ea42e4c29d0e7a9e8c6c965a0bd93e233e7cc12e760cfbd42c67480",
+      "width": 1200,
+      "height": 280,
+      "source": {
+        "path": "assets/images/condition-en-openai-png.png",
+        "sha256": "71cbc4edfbcc92e8a8116ec0177ecb9eb7fb200d80de8762ec68d32c72bd7f0e",
+        "width": 1200,
+        "height": 216
+      },
+      "padding": {
+        "left": 0,
+        "top": 32,
+        "right": 0,
+        "bottom": 32
+      }
+    },
+    "condition-en/png-small": {
+      "path": "assets/images-padded/condition-en-png-small.png",
+      "sha256": "d26697a7f9b51cfee308f63c05cd1d3e49c7dabe8d29cbecc59098a64b162bc1",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/condition-en-openai-png-small.png",
+        "sha256": "9ff7455c6f2daecde128540f1ec845e1fb8d7d42914823777243d619b45c0083",
+        "width": 600,
+        "height": 108
+      },
+      "padding": {
+        "left": 0,
+        "top": 86,
+        "right": 0,
+        "bottom": 86
+      }
+    },
+    "correction-uk/png": {
+      "path": "assets/images-padded/correction-uk-png.png",
+      "sha256": "ed0a47d1f734efbc94f190e09175944cc398a2bc552251c336290cf9c80491e6",
+      "width": 1200,
+      "height": 280,
+      "source": {
+        "path": "assets/images/correction-uk-openai-png.png",
+        "sha256": "98af4bb0164065ad27fb8f721e81f5b0730a79f584cd5e0ad83b1ee8e89a24e5",
+        "width": 1200,
+        "height": 216
+      },
+      "padding": {
+        "left": 0,
+        "top": 32,
+        "right": 0,
+        "bottom": 32
+      }
+    },
+    "correction-uk/png-small": {
+      "path": "assets/images-padded/correction-uk-png-small.png",
+      "sha256": "cebf0a1a1ba1572934009129bb6ef6c818eab11ef0eb583d3e7a18c5542b609f",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/correction-uk-openai-png-small.png",
+        "sha256": "eba26f7f4954438c86c3b05dff7cfe6b0139b9cf1d58bc10f1fb37fc30b256fe",
+        "width": 600,
+        "height": 108
+      },
+      "padding": {
+        "left": 0,
+        "top": 86,
+        "right": 0,
+        "bottom": 86
+      }
+    },
+    "correction-en/png": {
+      "path": "assets/images-padded/correction-en-png.png",
+      "sha256": "98a5592555663e0aa7bbae0db75708f43f4c7e0ec597c061d20cd3c2876b9055",
+      "width": 1200,
+      "height": 280,
+      "source": {
+        "path": "assets/images/correction-en-openai-png.png",
+        "sha256": "06f3319bf9d90eaa3848c93607f4a0207460b8551c023c04252df56d212171a5",
+        "width": 1200,
+        "height": 216
+      },
+      "padding": {
+        "left": 0,
+        "top": 32,
+        "right": 0,
+        "bottom": 32
+      }
+    },
+    "correction-en/png-small": {
+      "path": "assets/images-padded/correction-en-png-small.png",
+      "sha256": "61d262d67be236f2b659824fd4fbbd2876540b8ed9adbceb0bfa1e82d8a2a99f",
+      "width": 600,
+      "height": 280,
+      "source": {
+        "path": "assets/images/correction-en-openai-png-small.png",
+        "sha256": "3609986f82b7f92d7cc79a29eba4c600b1ccf3ece17a8e5943a3d2fa38c94bd8",
+        "width": 600,
+        "height": 108
+      },
+      "padding": {
+        "left": 0,
+        "top": 86,
+        "right": 0,
+        "bottom": 86
+      }
+    }
+  }
+}

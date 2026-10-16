@@ -9,7 +9,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from .data import ROOT, load_dataset, matrix, read_json
+from .data import MODEL_IDS, ROOT, load_dataset, matrix, read_json
 from .images import load_images, prepare
 from .report import generate_report
 from .runner import run_experiment
@@ -33,8 +33,9 @@ def main(argv: list[str] | None = None) -> int:
     run = commands.add_parser("run", help="Run the fixed experiment matrix")
     run.add_argument("--block", choices=("all", "original", "wording", "traps"), default="all")
     run.add_argument("--provider", choices=("all", "jev", "openai"), default="all")
-    run.add_argument("--repeats", type=positive, default=10)
-    run.add_argument("--seed", type=int, default=20261009)
+    run.add_argument("--model", choices=("all", *MODEL_IDS), default="all")
+    run.add_argument("--repeats", type=positive, default=5)
+    run.add_argument("--seed", type=int, default=20261016)
     run.add_argument("--timeout", type=positive, default=30)
     run.add_argument("--dry-run", action="store_true")
     run.add_argument(
@@ -42,7 +43,7 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Run only initial checks and forecast full-run cost",
     )
-    run.add_argument("--pricing", type=Path, default=ROOT / "data/pricing.json")
+    run.add_argument("--pricing", type=Path, default=ROOT / "data/pricing-20261016.json")
     run.add_argument(
         "--output",
         type=Path,
@@ -65,7 +66,9 @@ def main(argv: list[str] | None = None) -> int:
                 f"{len(dataset.examples)} examples; {len(images['images'])} PNGs; dataset {dataset.fingerprint}"
             )
             return 0
-        warmups, schedule = matrix(dataset, args.repeats, args.seed, args.block, args.provider)
+        warmups, schedule = matrix(
+            dataset, args.repeats, args.seed, args.block, args.provider, args.model
+        )
         examples = {e.id: e for e in dataset.examples}
         counts = Counter(examples[t.example_id].block for t in schedule)
         print(
@@ -76,6 +79,7 @@ def main(argv: list[str] | None = None) -> int:
                     "warmup": len(warmups),
                     "requests_to_send": len(warmups) + (0 if args.warmup_only else len(schedule)),
                     "seed": args.seed,
+                    "conditions": dict(Counter(t.mode for t in schedule)),
                 },
                 indent=2,
             )
@@ -84,7 +88,8 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         load_dotenv(ROOT / ".env", override=False)
         models = {
-            "jev": os.getenv("JEV_MODEL", "jev-1.13.0"),
+            "jev13": os.getenv("JEV13_MODEL", "jev-1.13.0"),
+            "jev14": os.getenv("JEV14_MODEL", "jev-1.14.0"),
             "openai": os.getenv("OPENAI_MODEL", "gpt-6-luna"),
         }
         keys = {"jev": os.getenv("TYPESAFE_API_KEY", ""), "openai": os.getenv("OPENAI_API_KEY", "")}

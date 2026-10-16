@@ -31,22 +31,22 @@ def test_originals_match_pinned_gist_exactly():
 def test_matrix_counts_and_balanced_reproducible_rounds():
     data = load_dataset()
     warmups, schedule = matrix(data)
-    assert len(warmups) == 8
+    assert len(warmups) == 18
     assert len(schedule) == 480
     blocks = {e.id: e.block for e in data.examples}
     assert Counter(blocks[t.example_id] for t in schedule) == {
-        "original": 80,
-        "wording": 160,
-        "traps": 240,
+        "original": 90,
+        "wording": 120,
+        "traps": 270,
     }
     assert all("png" not in t.mode for t in schedule if blocks[t.example_id] == "wording")
-    assert len(set((t.example_id, t.mode) for t in schedule[:48])) == 48
-    assert Counter(t.repetition for t in schedule) == dict.fromkeys(range(1, 11), 48)
+    assert len(set((t.example_id, t.mode) for t in schedule[:96])) == 96
+    assert Counter(t.repetition for t in schedule) == dict.fromkeys(range(1, 6), 96)
     assert schedule == matrix(data)[1]
     assert schedule != matrix(data, seed=1)[1]
-    assert len(matrix(data, provider="jev")[1]) == 160
-    assert len(matrix(data, provider="openai")[1]) == 320
-    assert len(matrix(data, block="wording")[0]) == 4
+    assert len(matrix(data, provider="jev")[1]) == 320
+    assert len(matrix(data, provider="openai")[1]) == 160
+    assert len(matrix(data, block="wording")[0]) == 6
 
 
 def test_gold_answers_are_separate_from_inputs():

@@ -134,12 +134,12 @@ def confidence_section(manifest: dict[str, Any], records: list[dict[str, Any]]) 
             correct = a["choice"] == expected
             confidence = a["confidence"]
             selected = a["probabilities"][a["choice"]]
-            outcomes[(r["provider"], correct)].append(confidence)
+            outcomes[(r.get("requested_model", r["provider"]), correct)].append(confidence)
             if correct:
                 candidate = (confidence, r["example_id"], r["mode"], a["question_id"], selected)
-                previous = least_confident.get(r["provider"])
+                previous = least_confident.get(r.get("requested_model", r["provider"]))
                 if previous is None or candidate < previous:
-                    least_confident[r["provider"]] = candidate
+                    least_confident[r.get("requested_model", r["provider"])] = candidate
             else:
                 mistakes[(r["example_id"], r["mode"], a["question_id"])].append(
                     (selected, a["probabilities"][expected], confidence)
@@ -168,9 +168,9 @@ def confidence_section(manifest: dict[str, Any], records: list[dict[str, Any]]) 
         "",
         "### Confidence by outcome",
         "",
-        "Counts are repeated question attempts, not independent examples. Providers have different workloads, including image modes only for Decisions; these aggregates are descriptive, not a ranking.",
+        "Counts are repeated question attempts, not independent examples. Results are grouped by requested model, keeping Jev versions separate. Workloads depend on the run matrix; these aggregates are descriptive, not a ranking.",
         "",
-        "| Provider | Outcome | Question attempts | Median confidence | Confidence min–max |",
+        "| Model | Outcome | Question attempts | Median confidence | Confidence min–max |",
         "|---|---|---:|---:|---:|",
     ]
     for (provider, correct), values in sorted(outcomes.items()):
@@ -221,7 +221,12 @@ def charts(summary: dict[str, Any], output: Path) -> None:
             "openai-text": "#5369c7",
             "openai-png": "#dc8744",
             "openai-png-small": "#a35e9c",
-        }[r["mode"]]
+        }.get(
+            r["mode"],
+            {"jev13": "#387780", "jev14": "#dc8744", "openai": "#5369c7"}.get(
+                r["mode"].split("-", 1)[0], "#777777"
+            ),
+        )
         for r in rows
     ]
     height = max(4, len(rows) * 0.4 + 2)
@@ -379,7 +384,7 @@ def generate_report(run_dir: Path, output: Path | None = None) -> Path:
         "",
         "These are diagnostic examples, not a representative language benchmark. Repetitions do not add independent examples. Some original questions quote the passage; the new traps avoid this. The English version is an adaptation.",
         "",
-        "Synthetic PNGs test reading rendered text, not general image understanding. Downsampling changes readability, payload size, and potentially tokenization. Both image sizes use detail=auto.",
+        "Synthetic PNGs test reading rendered text, not general image understanding. Downsampling changes readability, payload size, and potentially tokenization. Decisions uses detail=auto. Runs with a padded image manifest preserve original text pixels and add white margins for Jev compatibility; see manifest.json for exact image provenance.",
         "",
         "Timing includes network and image upload, not just inference. original returns nine answers; other blocks return one. original latency is not divided by nine. Server caching is uncontrolled; there is no local response cache.",
         "",

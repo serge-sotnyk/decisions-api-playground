@@ -39,7 +39,7 @@ def render(text: str, font_path: Path) -> Image.Image:
     return image
 
 
-def prepare(dataset: Dataset, root: Path = ROOT) -> dict[str, Any]:
+def prepare_originals(dataset: Dataset, root: Path = ROOT) -> dict[str, Any]:
     font_info = verify_files(root / "assets/fonts")
     output = root / "assets/images"
     output.mkdir(parents=True, exist_ok=True)
@@ -77,11 +77,61 @@ def prepare(dataset: Dataset, root: Path = ROOT) -> dict[str, Any]:
     return manifest
 
 
-def load_images(dataset: Dataset, root: Path = ROOT) -> dict[str, Any]:
-    manifest = read_json(root / "assets/images/manifest.json")
+def load_images(dataset: Dataset, root: Path = ROOT, *, original: bool = False) -> dict[str, Any]:
+    folder = "images" if original else "images-padded"
+    manifest = read_json(root / f"assets/{folder}/manifest.json")
     if manifest["dataset_sha256"] != dataset.fingerprint:
         raise ValueError("Images are stale. Run prepare again.")
     for image in manifest["images"].values():
         if digest((root / image["path"]).read_bytes()) != image["sha256"]:
             raise ValueError(f"Image checksum mismatch: {image['path']}")
+    return manifest
+
+
+def prepare(dataset: Dataset, root: Path = ROOT) -> dict[str, Any]:
+    """Pad the frozen original pixels, never redraw or overwrite the October 9 images."""
+    original = load_images(dataset, root, original=True)
+    output = root / "assets/images-padded"
+    output.mkdir(parents=True, exist_ok=True)
+    items = {}
+    for key, source in original["images"].items():
+        example_id, legacy_mode = key.split("/")
+        kind = legacy_mode.removeprefix("openai-")
+        with Image.open(root / source["path"]) as image:
+            image = image.convert("RGB")
+            width, height = max(280, image.width), max(280, image.height)
+            if max(width, height) > 1568:
+                raise ValueError("Image exceeds Jev's maximum dimension")
+            left, top = (width - image.width) // 2, (height - image.height) // 2
+            padded = Image.new("RGB", (width, height), "white")
+            padded.paste(image, (left, top))
+            path = output / f"{example_id}-{kind}.png"
+            padded.save(path, format="PNG")
+        items[f"{example_id}/{kind}"] = {
+            "path": path.relative_to(root).as_posix(),
+            "sha256": digest(path.read_bytes()),
+            "width": width,
+            "height": height,
+            "source": source,
+            "padding": {
+                "left": left,
+                "top": top,
+                "right": width - source["width"] - left,
+                "bottom": height - source["height"] - top,
+            },
+        }
+    manifest = {
+        "dataset_sha256": dataset.fingerprint,
+        "source_manifest_sha256": digest((root / "assets/images/manifest.json").read_bytes()),
+        "font": original["font"],
+        "pillow": PIL.__version__,
+        "render": {
+            "source_render": original["render"],
+            "minimum_side": 280,
+            "padding": "white, centered, applied after original 50% downsampling",
+            "resampling": "none; source pixels preserved",
+        },
+        "images": items,
+    }
+    write_json(output / "manifest.json", manifest)
     return manifest

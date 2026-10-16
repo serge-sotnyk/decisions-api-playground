@@ -3,6 +3,7 @@
 import base64
 import math
 from typing import Any
+from uuid import uuid4
 
 from .data import Example
 
@@ -14,8 +15,12 @@ ENDPOINTS = {
 
 def payload(example: Example, mode: str, model: str, png: bytes | None = None) -> dict[str, Any]:
     # Example deliberately has no expected answers or explanations.
-    if mode == "jev-text":
-        return {
+    if mode in {
+        f"{prefix}-{kind}"
+        for prefix in ("jev", "jev13", "jev14")
+        for kind in ("text", "png", "png-small")
+    }:
+        body = {
             "model": model,
             "state": {"text": example.text},
             "questions": {
@@ -23,6 +28,19 @@ def payload(example: Example, mode: str, model: str, png: bytes | None = None) -
                 for q in example.questions
             },
         }
+        if not mode.endswith("text"):
+            if not png:
+                raise ValueError("Image mode requires PNG")
+            reference = str(uuid4())
+            body["state"] = {"text": reference}
+            body["assets"] = {
+                reference: {
+                    "type": "image",
+                    "format": "png",
+                    "data_base64": base64.b64encode(png).decode(),
+                }
+            }
+        return body
     if mode not in ("openai-text", "openai-png", "openai-png-small"):
         raise ValueError(f"Unknown mode: {mode}")
     evidence: Any = example.text
@@ -142,7 +160,7 @@ def redact(value: Any, secrets: list[str]) -> Any:
         return {
             k: (
                 "[REDACTED]"
-                if k.lower() in {"authorization", "api_key", "image_url"}
+                if k.lower() in {"authorization", "api_key", "image_url", "data_base64"}
                 else redact(v, secrets)
             )
             for k, v in value.items()
